@@ -1,0 +1,25 @@
+{
+  "name": "dismanager",
+  "version": "1.0.0",
+  "description": "DisManager: AI-Enabled Landslide & Disaster Early Warning Platform for North Eastern India",
+  "scripts": {
+    "postinstall": "npm --prefix client install && npm --prefix server install",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client": "npm --prefix client run build",
+    "build:server": "npm --prefix server run build",
+    "build": "npm --prefix client run build && npm --prefix server run build",
+    "start": "cd server && npm start"
+  },
+  "dependencies": {
+    "@vercel/node": "^3.2.35",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="24" fill="#090d16"/>
+  <path d="M15 75L45 28L62 55L75 38L90 75H15Z" fill="url(#mountainGrad)" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="62" cy="22" r="8" fill="#f59e0b" fill-opacity="0.85"/>
+  <path d="M42 45L48 58L55 52L64 68" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 3"/>
+  <circle cx="64" cy="68" r="4" fill="#ef4444"/>
+  <defs>
+    <linearGradient id="mountainGrad" x1="50" y1="28" x2="50" y2="75" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+</svg>

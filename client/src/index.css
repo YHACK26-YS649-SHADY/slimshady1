@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --theme-bg: #0c0a12;
+    --theme-surface: rgba(22, 17, 31, 0.85);
+    --theme-border: rgba(245, 158, 11, 0.2);
+    --theme-accent: #f59e0b;
+    --theme-accent-orange: #f97316;
+  }
+
+  *,
+  *::before,
+  *::after {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #0c0a12;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.07) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(249, 115, 22, 0.06) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(239, 68, 68, 0.03) 0px, transparent 50%);
+    color: #f8fafc;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading, .font-data {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom Sunset Amber & Cyber Orange Glassmorphism */
+.glass-panel {
+  background: rgba(20, 16, 28, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-glow {
+  background: rgba(26, 20, 36, 0.9);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 30px -5px rgba(249, 115, 22, 0.25);
+}
+
+.glass-panel-amber {
+  background: rgba(35, 24, 16, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.2);
+}
+
+.glass-panel-danger {
+  background: rgba(40, 12, 18, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 35px -5px rgba(239, 68, 68, 0.35);
+}
+
+/* Warm Radar Sweep Keyframe */
+@keyframes radar-sweep-amber {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep-amber 4s linear infinite;
+}
+
+/* Custom Scrollbar - Warm Amber */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0c18;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d243d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Leaflet Custom Overrides for Sunset Theme */
+.leaflet-container {
+  background: #090710 !important;
+  font-family: var(--font-sans) !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: rgba(24, 18, 33, 0.96) !important;
+  backdrop-filter: blur(14px) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.9) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #181221 !important;
+}
+
+.leaflet-control-zoom a {
+  background: #181221 !important;
+  color: #fbbf24 !important;
+  border-color: #3d2f50 !important;
+}
+.leaflet-control-zoom a:hover {
+  background: #2a1f3d !important;
+  color: #f97316 !important;
+}
+
+/* Pulsing Risk Circle Animations */
+@keyframes pulse-critical {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.85);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.pulse-red {
+  animation: pulse-critical 1.8s infinite;
+}
+

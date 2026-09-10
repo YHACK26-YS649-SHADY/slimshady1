@@ -1,0 +1,111 @@
+[
+  {
+    "id": "road-nh10",
+    "name": "NH-10 (Sevoke-Teesta-Gangtok Corridor)",
+    "code": "NH-10",
+    "type": "National Highway / Lifeline",
+    "length_km": 115,
+    "associated_zone_ids": ["ner-wb-01", "ner-sk-01"],
+    "critical_assets": ["Teesta Bridge", "Coronation Bridge", "Likuvir Landslide Zone", "29th Mile Sinking Zone"],
+    "coordinates": [
+      [88.4689, 27.0667],
+      [88.4890, 27.1240],
+      [88.5200, 27.1890],
+      [88.5800, 27.2800],
+      [88.6065, 27.3389]
+    ]
+  },
+  {
+    "id": "road-nh29",
+    "name": "NH-29 (Dimapur-Kohima-Mao Highway)",
+    "code": "NH-29",
+    "type": "National Highway / Commercial Arterial",
+    "length_km": 74,
+    "associated_zone_ids": ["ner-nl-01", "ner-mn-02"],
+    "critical_assets": ["Dzüdza River Bridge", "Phesama Sinking Area", "Sechü Zubza Bypass"],
+    "coordinates": [
+      [93.7250, 25.9080],
+      [93.8500, 25.7800],
+      [93.9900, 25.7200],
+      [94.1086, 25.6751],
+      [94.1352, 25.5089]
+    ]
+  },
+  {
+    "id": "road-nh06",
+    "name": "NH-06 (Shillong-Jowai-Sonapur-Silchar)",
+    "code": "NH-06",
+    "type": "National Highway / Multi-State Lifeline",
+    "length_km": 210,
+    "associated_zone_ids": ["ner-ml-01", "ner-ml-03"],
+    "critical_assets": ["Sonapur Landslide Tunnel", "Lumshnong Cement Corridor", "Wahiajer Bridge"],
+    "coordinates": [
+      [91.8933, 25.5788],
+      [92.0500, 25.5200],
+      [92.2038, 25.4484],
+      [92.3500, 25.2800],
+      [92.7900, 24.8300]
+    ]
+  },
+  {
+    "id": "road-nh37",
+    "name": "NH-37 / Tupul-Noney Railway Line",
+    "code": "NH-37 / NFR-Line",
+    "type": "National Highway & Strategic Railway",
+    "length_km": 140,
+    "associated_zone_ids": ["ner-mn-01"],
+    "critical_assets": ["Tupul Pier Bridge 119", "Ijei River Valley Embankment", "Makhuam Tunnel Portal"],
+    "coordinates": [
+      [93.1500, 24.8100],
+      [93.3800, 24.8000],
+      [93.6335, 24.7891],
+      [93.8200, 24.8050],
+      [93.9400, 24.8170]
+    ]
+  },
+  {
+    "id": "road-nh54",
+    "name": "NH-54 (Silchar-Vairengte-Aizawl Lifeline)",
+    "code": "NH-54 (NH-306)",
+    "type": "National Highway / State Lifeline",
+    "length_km": 180,
+    "associated_zone_ids": ["ner-mz-01", "ner-mz-02"],
+    "critical_assets": ["Durtlang Leitan Ridge Bypass", "Hunthar Sinking Zone", "Melthum Quarry Cut"],
+    "coordinates": [
+      [92.7500, 24.6500],
+      [92.7300, 24.1800],
+      [92.7176, 23.7271],
+      [92.9500, 23.5800],
+      [93.3283, 23.4756]
+    ]
+  },
+  {
+    "id": "road-nh13",
+    "name": "NH-13 (Trans-Arunachal Highway / Sela Corridor)",
+    "code": "NH-13",
+    "type": "Defense Strategic Highway",
+    "length_km": 240,
+    "associated_zone_ids": ["ner-ar-02", "ner-ar-01"],
+    "critical_assets": ["Sela Tunnel 1 & 2", "Jaswantgarh Ridge", "Dirang Valley Loop"],
+    "coordinates": [
+      [92.4100, 27.2500],
+      [92.1500, 27.4200],
+      [91.8653, 27.5861],
+      [91.9500, 27.7000]
+    ]
+  },
+  {
+    "id": "road-nfr-hill",
+    "name": "NFR Lumding-Haflong-Badarpur Hill Section",
+    "code": "NFR-HillRail",
+    "type": "Strategic Mountain Railway",
+    "length_km": 170,
+    "associated_zone_ids": ["ner-as-01"],
+    "critical_assets": ["New Haflong Track Yard", "Jatinga Viaduct 4", "Daotuhaja Sinking Siding"],
+    "coordinates": [
+      [93.1800, 25.7500],
+      [93.0185, 25.1647],
+      [92.8900, 24.9500]
+    ]
+  }
+]
