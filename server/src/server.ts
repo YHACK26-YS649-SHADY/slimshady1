@@ -23,14 +23,32 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({ origin: '*' }));
 app.use(express.json({ limit: '10mb' }));
 
-// Load static seed datasets
-const zonesDataPath = path.join(__dirname, 'data', 'ner_zones.json');
-const historicalDataPath = path.join(__dirname, 'data', 'historical_landslides.json');
-const roadsDataPath = path.join(__dirname, 'data', 'vulnerable_roads.json');
+// Resilient static seed dataset loader
+function loadSeedDataset<T>(filename: string): T {
+  const possiblePaths = [
+    path.join(__dirname, 'data', filename),
+    path.join(__dirname, '..', 'src', 'data', filename),
+    path.join(__dirname, 'src', 'data', filename),
+    path.join(process.cwd(), 'server', 'src', 'data', filename),
+    path.join(process.cwd(), 'src', 'data', filename),
+    path.join(process.cwd(), 'data', filename)
+  ];
+  for (const p of possiblePaths) {
+    try {
+      if (fs.existsSync(p)) {
+        return JSON.parse(fs.readFileSync(p, 'utf-8'));
+      }
+    } catch {
+      // Continue to next path
+    }
+  }
+  console.warn(`[DisManager] Seed dataset ${filename} not found in searched paths, returning empty fallback.`);
+  return [] as unknown as T;
+}
 
-const nerZones: ZoneData[] = JSON.parse(fs.readFileSync(zonesDataPath, 'utf-8'));
-const historicalLandslides = JSON.parse(fs.readFileSync(historicalDataPath, 'utf-8'));
-const vulnerableRoads = JSON.parse(fs.readFileSync(roadsDataPath, 'utf-8'));
+const nerZones: ZoneData[] = loadSeedDataset<ZoneData[]>('ner_zones.json');
+const historicalLandslides = loadSeedDataset<any[]>('historical_landslides.json');
+const vulnerableRoads = loadSeedDataset<any[]>('vulnerable_roads.json');
 
 // Create HTTP and WebSocket servers
 const server = createServer(app);
