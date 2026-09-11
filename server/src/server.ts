@@ -324,16 +324,14 @@ setInterval(() => {
   evaluateAllZones(true);
 }, 15 * 60 * 1000);
 
-// Start Server only if running as standalone server
-if (process.env.VERCEL !== '1') {
-  server.listen(PORT, () => {
-    console.log(`=======================================================`);
-    console.log(`📡 DisManager Early Warning Server active on port ${PORT}`);
-    console.log(`⚡ WebSocket Stream ready at ws://localhost:${PORT}/ws`);
-    console.log(`📍 Monitored NER Zones: ${nerZones.length}`);
-    console.log(`=======================================================`);
-  });
-}
+// Start Server
+server.listen(PORT, () => {
+  console.log(`=======================================================`);
+  console.log(`📡 DisManager Early Warning Server active on port ${PORT}`);
+  console.log(`⚡ WebSocket Stream ready at ws://localhost:${PORT}/ws`);
+  console.log(`📍 Monitored NER Zones: ${nerZones.length}`);
+  console.log(`=======================================================`);
+});
 
 export { app, server };
 export default app;
