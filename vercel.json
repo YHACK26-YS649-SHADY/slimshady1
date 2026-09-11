@@ -1,8 +1,7 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist",
-  "framework": "vite",
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -13,4 +12,4 @@
       "destination": "/index.html"
     }
   ]
-  
+}
